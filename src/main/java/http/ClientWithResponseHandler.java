@@ -43,6 +43,18 @@ import org.apache.http.util.EntityUtils;
  * the process of processing the HTTP response and releasing associated
  * resources.
  */
+/**
+ * 
+ * <pre>
+ * 最简单的例子，不带请求参数
+ * 
+ * ---
+ * 1.请求
+ * 2.响应
+ * @author gzh
+ *
+ * </pre>
+ */
 public class ClientWithResponseHandler {
 
 	public final static void main(String[] args) throws Exception {
@@ -68,6 +80,7 @@ public class ClientWithResponseHandler {
 
 			};
 			String responseBody = httpclient.execute(httpget, responseHandler);
+//			String responseBody = httpclient.execute(httpget);
 			System.out.println("----------------------------------------");
 			System.out.println(responseBody);
 		} finally {
